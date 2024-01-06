@@ -26,13 +26,13 @@ python completion.py --model discrete_diffusion --model_pth output/diffsion --vq
 
 ## 🏁 Results
 Multimodal completion on ShapeNet.
-![Image](assets/github_shapenet.png)
+![Image](assets/Shapenet.jpg)
 
 Multimodal completion on PartNet.
-![Image](assets/github_partnet.png)
+![Image](assets/Partnet.jpg)
 
 Multimodal completion on real-scan dataset RedWood.
-![Image](assets/github_redwood.png)
+![Image](assets/Redwood.jpg)
 
 ## 📬 Contact
 Contact [Zalfy](zalfy_code@163.com) if you have any further questions.
