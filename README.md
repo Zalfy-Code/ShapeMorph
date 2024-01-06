@@ -23,3 +23,16 @@ Please revise ```--model_pth``` and ```--vqvae_pth``` to the checkpoints path.
 ```
 python completion.py --model discrete_diffusion --model_pth output/diffsion --vqvae vqvae_512 --vqvae_pth output/vqvae_512 --sample_n 5 
 ```
+
+## 🏁 Results
+Multimodal completion on ShapeNet.
+![Image](assets/github_shapenet.png)
+
+Multimodal completion on PartNet.
+![Image](assets/github_partnet.png)
+
+Multimodal completion on real-scan dataset RedWood.
+![Image](assets/github_redwood.png)
+
+## 📬 Contact
+Contact [Zalfy](zalfy_code@163.com) if you have any further questions.
