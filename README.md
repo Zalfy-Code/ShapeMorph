@@ -8,18 +8,18 @@ This repository is the official pytorch implementation of our paper: "ShapeMorph
 We process our dataset as [3DILG](https://github.com/1zb/3DILG).
 
 ### ⛄ Shape Encoding
-Please command out ``` from shapenet_partial import ShapeNet ``` in ``` dataset.py ``` before training. 
 ```
 torchrun --nproc_per_node=4 run_vqvae.py --output_dir output/vqvae --model vqvae_512 --batch_size 32 --num_workers 40 --lr 1e-3 --disable_eval --point_cloud_size 2048
 ```
 
 ### ☃️ Shape Completion
-Please command out ``` from shapenet import ShapeNet ``` in ``` dataset.py ``` before training. 
+Please revise ```--vqvae_pth``` to checkpoint path. 
 ```
 torchrun --nproc_per_node=4 run_diffusion.py --output_dir output/diffusion --model blockwise_diffusion --vqvae vqvae_512 --vqvae_pth output/vqvae_512 --batch_size 16 --num_workers 40 --lr 1e-3 
 ```
 
 ## 🛸 Sampling
+Please revise ```--model_pth``` and ```--vqvae_pth``` to the checkpoints path.
 ```
-python completion.py --model auto_completion --model_pth output/auto --sdvq sdvq_513 --sdvq_pth output/sdvq --sample_n 5 --results results
+python completion.py --model discrete_diffusion --model_pth output/diffsion --vqvae vqvae_512 --vqvae_pth output/vqvae_512 --sample_n 5 
 ```
